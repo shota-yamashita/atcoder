@@ -1,0 +1,6 @@
+# input
+a, b = map(int, input().split())
+
+# input(2)
+n = int(input())
+arr = list(map(int, input().split()))
