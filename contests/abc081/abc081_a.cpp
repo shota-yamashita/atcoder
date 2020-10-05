@@ -9,10 +9,9 @@ using namespace std;
 int main() {
     string s;
     cin >> s;
+
     int counter = 0;
 
-    if (s[0] == '1') ++counter;
-    if (s[1] == '1') ++counter;
-    if (s[2] == '1') ++counter;
+    for(int i=0;i<=3;i++) if (s[i] == '1') ++counter;
     cout << counter << endl;
 }
