@@ -1,30 +1,27 @@
 // B - Shift only
 // https://atcoder.jp/contests/abc081/tasks/abc081_b
 
-#include <iostream>
+#include <cstdio>
+#include <algorithm>
 
 using namespace std;
 
+int N, A[200];
+
 int main() {
-    int N;
-    int A[10000];
-
-    cin >> N;
-    for (int i = 0; i < N; i++) cin >> A[i];
-
-    int count = 0;
-    bool exist_odd = false;
-
-    while (true) {
-        for (int i = 0; i < N; i++) {
-            if (A[i] % 2 != 0) exist_odd = true;
+    int dmin = 100;
+    scanf("%d", &N);
+    for (int i=0; i<N; i++) {
+        int A;
+        scanf("%d", &A);
+        int d = 0;
+        while (A%2 == 0) {
+            A /= 2;
+            ++d;
         }
-
-        if (exist_odd) break;
-
-        for (int i = 0; i < N; i++) A[i] /= 2;
-        count++;
+        dmin = min(dmin, d);
     }
 
-    cout << count << endl;
+    printf("%d\n", dmin);
+    return 0;
 }
