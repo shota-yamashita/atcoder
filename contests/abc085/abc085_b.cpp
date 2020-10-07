@@ -3,15 +3,16 @@
 
 #include <iostream>
 #include <set>
+#define REP(i, n) for (int i=1; i<=(int)(n); i++)
 using namespace std;
 
 int main() {
     int N, a[100];
     cin >> N;
-    for(int i=0; i<N; i++) cin >> a[i];
+    REP(i, N) cin >> a[i];
 
     set<int> values;
-    for(int i=0; i<N; i++) values.insert(a[i]);
+    REP(i, N) values.insert(a[i]);
 
     cout << values.size() << endl;
 }
