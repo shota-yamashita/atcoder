@@ -1,27 +1,21 @@
 // B - Shift only
 // https://atcoder.jp/contests/abc081/tasks/abc081_b
 
-#include <cstdio>
-#include <algorithm>
-
+#include <iostream>
 using namespace std;
 
-int N, A[200];
-
 int main() {
+    int n; cin >> n;
+    int a[200];
     int dmin = 100;
-    scanf("%d", &N);
-    for (int i=0; i<N; i++) {
-        int A;
-        scanf("%d", &A);
+    for (int i=0; i<n; i++) {
+        cin >> a[i];
         int d = 0;
-        while (A%2 == 0) {
-            A /= 2;
+        while (a[i]%2 == 0) {
+            a[i] /= 2;
             ++d;
         }
         dmin = min(dmin, d);
     }
-
-    printf("%d\n", dmin);
-    return 0;
+    cout << dmin << endl;
 }
