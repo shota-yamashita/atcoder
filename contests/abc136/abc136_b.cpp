@@ -1,0 +1,15 @@
+// B - Uneven Numbers
+// https://atcoder.jp/contests/abc136/tasks/abc136_b
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n; cin >> n;
+    int count = 0;
+    for (int i=1;i<=n;i++) {
+        string tmp = to_string(i);
+        if (tmp.size() % 2 == 1) count++;
+    }
+    cout << count << endl;
+}
